@@ -32,8 +32,8 @@ const changeSideBar = () => {
     bar3.classList.remove("bar-active");
     bar4.classList.remove("bar-active");
 
-    popularPackageAppear.classList.remove("slide-show-appear");
-    popularDestinationAppear.classList.remove("slide-show-appear");
+    // popularPackageAppear.classList.remove("slide-show-appear");
+    // popularDestinationAppear.classList.remove("slide-show-appear");
   }
 
   if (popularDestinationAppearPosition < screenPosition) {
@@ -43,7 +43,7 @@ const changeSideBar = () => {
     bar2.classList.add("bar-active");
 
     popularDestinationAppear.classList.add("slide-show-appear");
-    popularPackageAppear.classList.remove("slide-show-appear");
+    // popularPackageAppear.classList.remove("slide-show-appear");
   }
 
   if (popularPackageAppearPosition < screenPosition) {
@@ -53,7 +53,7 @@ const changeSideBar = () => {
     bar4.classList.remove("bar-active");
 
     popularPackageAppear.classList.add("slide-show-appear");
-    popularDestinationAppear.classList.remove("slide-show-appear");
+    // popularDestinationAppear.classList.remove("slide-show-appear");
   }
 
   if (servicesAppearPosition < screenPosition) {
