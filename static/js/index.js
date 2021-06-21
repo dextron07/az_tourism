@@ -66,11 +66,14 @@ const changeSideBar = () => {
 
 const toggleMenu = (showMenu) => {
   let menu = document.querySelector("nav");
+  let header = document.querySelector("header");
 
   if (showMenu) {
     menu.classList.add("active");
+    header.classList.add("inactive");
   } else {
     menu.classList.remove("active");
+    header.classList.remove("inactive");
   }
 };
 
