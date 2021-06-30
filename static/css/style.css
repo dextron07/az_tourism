@@ -1,10 +1,11 @@
 @import url("https://fonts.googleapis.com/css2?family=Nova+Flat&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Dela+Gothic+One&family=Ubuntu:wght@300;400;700&display=swap');
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Nova Flat", cursive;
+  font-family: "Ubuntu", sans-serif;
   line-height: 1.6;
 }
 
@@ -173,8 +174,39 @@ nav a:visited {
   overflow-y: hidden;
 }
 
+.title {
+  position: absolute;
+  top: 20vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+.title h2 {
+  font-size: 48px;
+  color: #ffffff;
+  width: 60%;
+  text-align: center;
+  font-family: "Dancing Script", cursive;
+}
+
+.first-word {
+  color: #537d7f;
+  font-family: "Dancing Script", cursive;
+}
+
+.subtitle {
+  width: 40%;
+  color: #fff;
+  text-align: center;
+  margin-top: 30px;
+  font-size: 18px;
+}
+
 #image-1 {
-  background: url("../images/image-12.jpeg") no-repeat center/cover;
+  /* background: url("../images/image-13.jpeg") no-repeat center/cover; */
   width: 100%;
   height: 100vh;
   position: relative;
@@ -185,6 +217,36 @@ nav a:visited {
 
   color: #ffffff;
   line-height: 1.6;
+  /* transition: transform zoom 2s ease-in-out infinite; */
+  /* animation: zoom 10s linear 2s infinite alternate; */
+}
+
+@keyframes zoom {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.025);
+  }
+  100% {
+    transform: scale(1.05);
+  }
+}
+
+.showcase-image {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.showcase-image img {
+  width: 100%;
+  height: 100vh;
+  animation: zoom 5s linear 1s infinite alternate;
 }
 
 #image-1 .container {
@@ -229,6 +291,37 @@ nav a:visited {
   box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
   backdrop-filter: blur(6px);
   -webkit-backdrop-filter: blur(6px);
+}
+
+.card-data {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+}
+
+.package-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.package-info button {
+  height: 50px;
+  border-radius: 10px;
+  padding: 5px;
+  background-color: #537d7f;
+  min-width: 100px;
+  border: 0;
+  color: #ffffff;
+  width: 100%;
+  margin-top: 20px;
+}
+
+.package-info button:hover {
+  opacity: 0.5;
+  cursor: pointer;
 }
 
 /* Search */
@@ -396,7 +489,7 @@ nav a:visited {
 }
 
 .section-services .container {
-  padding: 2rem;
+  padding: 50px;
 }
 
 .section-content {
@@ -439,6 +532,7 @@ nav a:visited {
 .section-services-cards .frosted-card:nth-child(1) img {
   width: 100%;
   border-radius: 10px;
+  margin: auto;
 }
 
 .section-services-cards .frosted-card:nth-child(1) img:hover {
@@ -570,5 +664,15 @@ footer h3 {
 
   .inactive {
     backdrop-filter: none;
+  }
+
+  .title {
+    display: none;
+  }
+
+  .showcase-image img {
+    width: auto;
+    position: absolute;
+    left: -450px;
   }
 }
